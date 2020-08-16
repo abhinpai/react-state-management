@@ -4,6 +4,7 @@ import { createAction, createReducer } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 import reducer from '../store/reducer';
 
+console.log("This is optimized implementation");
 const initialState = {
   isDarkTheme: true,
 };
