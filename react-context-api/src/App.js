@@ -4,7 +4,6 @@ import { useDataLayer } from './context/DataLayer';
 
 function App() {
   const [{ isDarkTheme }, dispatch] = useDataLayer();
-  console.log(isDarkTheme);
 
   const toggleTheme = () => {
     dispatch({
@@ -16,7 +15,7 @@ function App() {
   };
 
   const getStyle = () => {
-    return isDarkTheme ? 'App dark' : 'App'
+    return isDarkTheme ? 'App dark' : 'App';
   };
 
   return (

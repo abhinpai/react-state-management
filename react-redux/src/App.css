@@ -1,0 +1,29 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in;
+  color: black;
+}
+
+.dark {
+  background-color: #162447;
+  color: white;
+}
+
+.emojie {
+  font-size: 12rem;
+}
+
+.App > div {
+  color: gray;
+  user-select: none;
+  cursor: pointer;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #d4d4d4;
+  border-radius: 8px;
+}
