@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import {toogleTheme} from './store-toolkit/theme';
+import { toogleTheme } from './store-toolkit/theme';
+import { loadUser } from './store-toolkit/user';
 
 function App() {
   const dispatch = useDispatch();
-  const isDarkTheme = useSelector((state) => state.isDarkTheme);
-  
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
+
   // Dispatch Using plaing OLD school Redux technique
   const toggleTheme = () => {
     dispatch({
@@ -18,9 +19,10 @@ function App() {
   };
 
   // Clean and concise code to dispatch action using redux/toolkit
-  const toogleThemeUsingTookit = () =>{
-    dispatch(toogleTheme({theme: !isDarkTheme}))
-  }
+  const toogleThemeUsingTookit = () => {
+    dispatch(loadUser());
+    dispatch(toogleTheme({ theme: !isDarkTheme }));
+  };
 
   const getStyle = () => {
     return isDarkTheme ? 'App dark' : 'App';
