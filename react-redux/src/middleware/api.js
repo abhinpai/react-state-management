@@ -1,4 +1,4 @@
-import axios from '';
+import axios from 'axios';
 import { apiCallMade, apiCallSuccess } from '../store-toolkit/apiActions';
 const api = ({ dispatch }) => (next) => async (action) => {
   if (action.type !== apiCallMade.type) return next(action);
